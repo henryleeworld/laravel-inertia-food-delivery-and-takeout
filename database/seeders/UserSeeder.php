@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
         User::create([
             'name'     => 'Admin User',
             'email'    => 'admin@admin.com',
-            'password' => bcrypt('password'),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         ])->roles()->sync(Role::where('name', RoleName::ADMIN->value)->first());
     }
 
@@ -35,7 +35,7 @@ class UserSeeder extends Seeder
         $vendor = User::create([
             'name'     => 'Restaurant owner',
             'email'    => 'vendor@admin.com',
-            'password' => bcrypt('password'),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         ]);
 
         $vendor->roles()->sync(Role::where('name', RoleName::VENDOR->value)->first());
@@ -52,7 +52,7 @@ class UserSeeder extends Seeder
         $vendor = User::create([
             'name'     => 'Loyal Customer',
             'email'    => 'customer@admin.com',
-            'password' => bcrypt('password'),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         ]);
 
         $vendor->roles()->sync(Role::where('name', RoleName::CUSTOMER->value)->first());
